@@ -3,7 +3,7 @@ Running DeepSeek using LLaMA C++ tools.
 
 ## Requirements
 
-You need to install llama.cpp if you want to use these scripts.
+You need to install [llama.cpp](https://github.com/ggerganov/llama.cpp) if you want to use these scripts.
 
 The easiest way is via Homebrew:
 

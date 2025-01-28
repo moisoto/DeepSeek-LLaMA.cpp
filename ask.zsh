@@ -6,6 +6,7 @@ if [ -z "$*" ] ; then
 fi
 
 model="unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF"
+cache="q8_0"
 
 # Set question to command line parameters
 question=$*
@@ -17,16 +18,16 @@ fld_name=responses/${question//[^[:alnum:]]/_}
 prompt="'<｜User｜>$question<｜Assistant｜>'"
 
 # You can also provide a simple prompt as follows:
-#simpleprompt="'<｜User｜>$question<｜Assistant｜>'"
+#simpleprompt="'$question'"
 #llama-cli -hf $model \
-#    --cache-type-k q8_0 \
+#    --cache-type-k $cache \
 #    --threads 16 \
 #    --chat-template deepseek3
 #    --prompt "$simpleprompt" \
 #    -no-cnv 2> system.log > >(tee answer.txt) 
 
 llama-cli -hf $model \
-    --cache-type-k q8_0 \
+    --cache-type-k $cache \
     --threads 16 \
     --prompt "$prompt" \
     -no-cnv 2> system.log > >(tee answer.txt) 

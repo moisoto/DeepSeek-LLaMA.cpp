@@ -69,7 +69,7 @@ The `call_endpoint.zsh` script shows how to call the chat completions endpoint:
 ### Using other models
 
 LLaMA C++ uses GGUF files (GGUF stands for GPT-Generated Unified Format). 
-So you will need to look for these kind of files in hugginface or your
+So you will need to look for these kind of files in Hugging Face or your
 preferred model source.
 
 For DeepSeek models [unsloth](https://huggingface.co/unsloth) has a very nice selection available at [Hugging Face](https://huggingface.co/collections/unsloth/deepseek-r1-all-versions-678e1c48f5d2fce87892ace5).

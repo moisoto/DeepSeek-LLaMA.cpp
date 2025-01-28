@@ -46,7 +46,14 @@ The `ask.zsh` script shows how to call llama-cli with a prompt. Check the source
 
 The `server.zsh` script shows how to run the server with a given model.
 ```shell
+# Run without parameters to use model unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF
 ./server.zsh
+
+# Or run with other model:
+./server.zsh unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF
+
+# Which would the same as:
+llama-server -hf unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF
 ```
 Let this running on a terminal as lonk as you need the server up (scripts for setting up a service comming soon).
 

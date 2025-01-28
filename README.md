@@ -16,7 +16,6 @@ brew upgrade # Optional but recommended
 brew install llama.cpp
 ```
 
-
 ## Using the scripts
 
 ### Download a model.
@@ -27,7 +26,6 @@ Just call ask.zsh and it will download the `unsloth/DeepSeek-R1-Distill-Llama-8B
 # A simple initial request
 ./ask.zsh "What model are you?"
 ```
-<br>
 
 ### Chatting with the model
 

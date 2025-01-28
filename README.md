@@ -37,7 +37,7 @@ llama-cli -hf unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF
 
 ### Asking a single question
 
-The `ask.zsh` script shows how to call llama-cli with a prompt. Check the source or just play with it:
+The `ask.zsh` script shows how to call llama-cli with a prompt. Check the [source](https://github.com/moisoto/DeepSeek-LLaMA.cpp/blob/main/ask.zsh) or just play with it:
 ```shell
 ./ask.zsh "Ask any quesiton here."
 ```

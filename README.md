@@ -16,7 +16,27 @@ brew upgrade # Optional but recommended
 brew install llama.cpp
 ```
 
+## TL;DR Steps
+
+I'm adding this section for people wanting to easily access DeepSeek locally via a browser.
+
+Run the following commands after installing `llama.cpp`:
+```shell
+# This will download the model and start a chat session.
+# Play with the model, ask a few questions and press CTRL-C to exit
+llama-cli -hf unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF
+
+# Now run a server
+llama-server -hf unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF
+```
+
+After running the `llama-server` command just go to your favorite browser and open http://localhost:8080
+
+<br>
+
 ## Using the scripts
+
+If you want to learn more about using LLaMA C++ tools check this section and the scripts used.
 
 ### Download a model.
 

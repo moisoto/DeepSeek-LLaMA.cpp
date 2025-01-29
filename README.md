@@ -16,17 +16,20 @@ brew upgrade # Optional but recommended
 brew install llama.cpp
 ```
 
-## TL;DR Steps
+## The Fast Way
 
-I'm adding this section for people wanting to easily access DeepSeek locally via a browser.
+To use the Web UI is really easy after you have `ollama.cpp` in your system.
 
-Run the following commands after installing `llama.cpp`:
+To download the model, just call `llama-cli` a follows:
 ```shell
 # This will download the model and start a chat session.
 # Play with the model, ask a few questions and press CTRL-C to exit
 llama-cli -hf unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF
+```
 
-# Now run a server
+Now run a Web Server with the LLaMA C++ Chat UI:
+```shell
+# This will start the server. Just leave the terminal open.
 llama-server -hf unsloth/DeepSeek-R1-Distill-Qwen-1.5B-GGUF
 ```
 
@@ -36,20 +39,11 @@ After running the `llama-server` command just go to your favorite browser and op
 
 ## Using the scripts
 
-If you want to learn more about using LLaMA C++ tools check this section and the scripts used.
-
-### Download a model.
-
-Just call ask.zsh and it will download the `unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF` model:
-
-```shell
-# A simple initial request
-./ask.zsh "What model are you?"
-```
+If you want to learn more about using LLaMA C++ tools check this section and the scripts used. It is assumed that you have the model downloaded as explained in the first section.
 
 ### Chatting with the model
 
-If you want the chat interface just run:
+If you want the chat interface on a a terminal just run:
 
 ```shell
 llama-cli -hf unsloth/DeepSeek-R1-Distill-Llama-8B-GGUF
@@ -85,6 +79,9 @@ The `call_endpoint.zsh` script shows how to call the chat completions endpoint:
 ```shell
 ./call_endpoint.zsh "Ask DeepSeek something"
 ```
+
+As you can see the server will respond in json format. This allows accessing the
+model from applications and using the model's AI capabilities in many useful ways.
 
 ### Using other models
 
